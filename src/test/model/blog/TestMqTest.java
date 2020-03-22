@@ -1,11 +1,7 @@
-package model;
+package model.blog;
 
-import com.db.stu.model.TestMq;
-import com.rabbitmq.client.*;
+import com.db.stu.model.blog.TestMq;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.util.concurrent.TimeoutException;
 
 public class TestMqTest {
 
