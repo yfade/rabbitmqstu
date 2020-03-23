@@ -14,13 +14,16 @@ public class Recv {
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        //定义消费者
         Consumer consumer = new DefaultConsumer(channel) {
+            //当队列中有新的消息时会触发此方法，获取消息
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) {
                 String message = new String(body, StandardCharsets.UTF_8);
                 System.out.println("simple receive " + message);
             }
         };
+        //监听队列，阻塞在这
         channel.basicConsume(QUEUE_NAME, true, consumer);
     }
 }
