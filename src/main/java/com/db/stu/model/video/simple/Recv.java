@@ -23,7 +23,7 @@ public class Recv {
                 System.out.println("simple receive " + message);
             }
         };
-        //监听队列，阻塞在这
+        //订阅消息 监听队列，阻塞在这
         channel.basicConsume(QUEUE_NAME, true, consumer);
     }
 }
