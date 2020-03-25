@@ -15,6 +15,7 @@ public class Recv1 {
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        // 声明交换机：指定交换机的名称和类型(广播：fanout)
         channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT);
         channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "");
 
