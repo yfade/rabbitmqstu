@@ -1,4 +1,4 @@
-package com.db.stu.model.video.routing;
+package com.db.stu.model.video.direct;
 
 import com.db.stu.model.video.util.ConnectionUtil;
 import com.rabbitmq.client.*;
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
-public class Recv1 {
+public class Recv2 {
     private static final String EXCHANGE_NAME = "routing_exchange";
 
     public static void main(String[] args) throws IOException, TimeoutException {
@@ -16,11 +16,11 @@ public class Recv1 {
 
         String queueName = channel.queueDeclare().getQueue();
         channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.DIRECT);
-        String[] routingKeys = {"debug", "info"};
+        String[] routingKeys = {"warning", "error"};
         for (String routingKey : routingKeys) {
             channel.queueBind(queueName, EXCHANGE_NAME, routingKey);
         }
-        System.out.println("Recv1 waiting receive message...");
+        System.out.println("Recv2 waiting receive message...");
 
         Consumer consumer = new DefaultConsumer(channel) {
             @Override

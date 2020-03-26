@@ -1,4 +1,4 @@
-package com.db.stu.model.video.ps;
+package com.db.stu.model.video.fanout;
 
 import com.db.stu.model.video.util.ConnectionUtil;
 import com.rabbitmq.client.Channel;

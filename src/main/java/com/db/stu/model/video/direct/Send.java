@@ -1,4 +1,4 @@
-package com.db.stu.model.video.routing;
+package com.db.stu.model.video.direct;
 
 import com.db.stu.model.video.util.ConnectionUtil;
 import com.rabbitmq.client.Channel;
