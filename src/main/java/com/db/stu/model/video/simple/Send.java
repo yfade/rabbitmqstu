@@ -21,7 +21,7 @@ public class Send {
         //要发送的消息
         String msg = "hello simple queue!";
         //发送消息 注意：exchange如果不需要写成空字符串，routingKey和队列名称保持一致
-        channel.basicPublish("", QUEUE_NAME, false, null, msg.getBytes(StandardCharsets.UTF_8));
+        channel.basicPublish("", QUEUE_NAME, null, msg.getBytes(StandardCharsets.UTF_8));
         System.out.println("simple queue send " + msg);
         channel.close();
         connection.close();

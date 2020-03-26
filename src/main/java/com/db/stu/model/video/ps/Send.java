@@ -17,7 +17,7 @@ public class Send {
 
         String msg = "hello fanout!!!";
         // 循环发布多条消息, 注意广播模式不需要routingKey, 可以写成""， 也可以随意写个名字，在消费者也随便写一个，生产者和消费者的routingKey的不一样也可以
-        channel.basicPublish(EXCHANGE_NAME, "", false, false, null, msg.getBytes(StandardCharsets.UTF_8));
+        channel.basicPublish(EXCHANGE_NAME, "", null, msg.getBytes(StandardCharsets.UTF_8));
         System.out.println("send " + msg);
 
         channel.close();
