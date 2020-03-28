@@ -1,7 +1,6 @@
 package com.db.stu.model.rpc;
 
 import com.db.stu.model.util.ConnectionUtil;
-import com.db.stu.model.video.util.ConnectionUtil;
 import com.rabbitmq.client.*;
 
 import java.io.IOException;

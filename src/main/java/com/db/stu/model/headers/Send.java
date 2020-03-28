@@ -1,7 +1,6 @@
 package com.db.stu.model.headers;
 
 import com.db.stu.model.util.ConnectionUtil;
-import com.db.stu.model.video.util.ConnectionUtil;
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
