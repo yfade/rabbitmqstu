@@ -1,4 +1,4 @@
-package com.db.stu.model.video.util;
+package com.db.stu.model.util;
 
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Connection;

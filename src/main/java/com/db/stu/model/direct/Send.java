@@ -1,6 +1,6 @@
-package com.db.stu.model.video.direct;
+package com.db.stu.model.direct;
 
-import com.db.stu.model.video.util.ConnectionUtil;
+import com.db.stu.model.util.ConnectionUtil;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 
