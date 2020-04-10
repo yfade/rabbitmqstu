@@ -14,7 +14,7 @@ public class Recv1 {
         Connection connection = ConnectionUtil.getConnection();
         final Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        //每个消费者发送确认消息之前，消息队列不发下一个消息到消费者，一次只处理一个消息
+        //每个消费者发送确认消息之前，消息队列不发下一个消息到消费者，一次只处理一个消息，必须是手动应答
         channel.basicQos(1);
         Consumer consumer = new DefaultConsumer(channel) {
             @Override
