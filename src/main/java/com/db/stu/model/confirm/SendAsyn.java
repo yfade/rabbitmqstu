@@ -51,7 +51,5 @@ public class SendAsyn {
         }
         System.out.println("send end...");
 
-        channel.close();
-        connection.close();
     }
 }
